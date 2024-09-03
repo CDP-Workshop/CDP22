@@ -1,0 +1,15 @@
+Compiling array-based languages to hybrid CPU/GPU systems has been of
+considerable interest in recent years. However, there is no reusable
+toolkit to allow compiler writers to quickly build such compilers. We
+present Velociraptor, a portable and reusable toolkit, specifically
+designed for building just-in-time compilers for array-based languages
+to hybrid CPU/GPU systems. Velociraptor takes as input language-neutral
+typed AST based representation of array based programs (with full
+support for flexible array indexing schemes and array operators) with
+some annotations about parts of the program to be offloaded to GPU.
+Velociraptor generates optimized CPU and GPU code. We will discuss
+the design and internals of Velociraptor. We will also present the
+integration of Velociraptor in two just-in-time compilers: one in McVM
+(a VM for MATLAB initially built by other students in our research
+group) and a proof-of-concept Python/NumPy compiler written by us.
+Preliminary experimental results from multiple GPUs are also discussed.

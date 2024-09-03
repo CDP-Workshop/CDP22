@@ -1,0 +1,9 @@
+Reusable software libraries are key to modern software construction.
+Libraries often come with important usage constraints; clients of
+these libraries are responsible for conforming to these constraints,
+and the misuse of libraries can cause mysterious program defects. We
+propose a novel summary-based static analysis approach for verifying
+that clients satisfy the constraints imposed by their libraries. We
+use tracematches as our constraint language. Our approach leverages
+modularity, as present in many software systems, to guide the
+analysis.

@@ -1,0 +1,54 @@
+﻿Short Abstract
+The compiler-driven performance workshop will consist of the presentation of reports on research progress at various academic and industrial sites across Canada and in the United States. Topics to be discussed in the workshop will
+include, but are not limited to:
+* innovative compiler analysis, transformation, and optimization techniques
+* languages, compilers, and optimization techniques for multicore processors and other parallel architectures
+* analysis and compilation techniques for dynamic programming languages
+* compiling for streaming or heterogeneous hardware
+* dynamic compilation for high-performance and real-time environments
+* compilation and optimization for scripting languages
+* compilation techniques for reducing power
+* program safety
+* whole system optimization and analysis
+* tools and infrastructure for compiler research
+Organizers
+We have assembled the following team of academic researchers and industry practitioners to co-organize the workshop:
+* Karim Ali, University of Alberta
+* Gregor Richards, University of Waterloo
+* Andrew Craik, IBM Canada
+* Bardia Mahjour, IBM Canada
+Relevance
+The proposed workshop addresses many issues of key relevance to CASCON. The end of processor frequency scaling has made compiler optimizations more important than ever. Varying programming models and dynamic runtimes have made it hard to understand system performance. The advent of multicore processors has made it difficult to achieve both high programmer productivity and performance. The proposed workshop is well suited to address these challenges.
+Agenda
+The proposed workshop is an all-day multiple-speakers workshop that will tentatively run from 9am until 4pm. The workshop will consist of eight to ten talks of 20–25 minutes each, with additional time for questions after each talk. Talks will be grouped into sessions by topic in
+groups of two or three talks, with either a half-hour break or lunch between sessions to provide further time for discussion and interaction. Given the commitments of the workshop organizers, we would prefer to have the workshop on Monday Nov 6.
+Interactive
+Each talk will be followed by at least a 5-minute question-and-answer period, allowing the audience to discuss the presentation with the speaker and each other. The two scheduled breaks and the lunch period will also give time for further interaction and more open discussion between attendees.
+Long Abstract
+The workshop on Compiler-Driven Performance (CDP) provides a unique opportunity for academic researchers, industry researchers, and developers from across Canada and the United States to examine the state-of-the-art compiler technology and discuss future directions for research and development.
+
+
+Developments in computing technology motivate a number of key challenges for compilers to address. The workshop has a particular focus on the following.
+
+
+1. Innovative Compiler Analysis, Transformation, and Optimization Techniques
+Today's software systems are often composed of several different languages and programming models. At the same time, the underlying processors and memory systems are typically complex, out-of-order, superscalar processors.  Managing this complexity, trying to produce efficient systems in a way that does not increase the burden on programmers, requires constant innovation in compilation methods and optimizations.
+2. Languages, Compilers, and Optimization Techniques for Multicore Processors and Other Parallel Architectures
+Highly-parallel hardware has created new opportunities for the utilization of such resources by advanced compilers. Progress has been reported both in the development of new analysis techniques, the exploitation of new technological solutions to facilitate the expression of concurrency and to deal with the needs for computation synchronization, e.g., hardware-supported transactional memory, and for data communication between computing domains. Approaches to improve the utilization of heterogeneous hardware platforms could also be discussed.
+3. Compiling for Streaming or Heterogeneous Hardware
+In addition to highly-parallel multiple-core processors for general-purpose and scientific computing, the computer hardware industry is also aggressively pursuing custom computing cores to accelerate key applications. Such heterogeneous computing systems were once limited to the embedded domain, but are becoming increasingly common for general-purpose computing. Examples include cores for encryption, compression, pattern-matching, and systems that have FPGA co-processors, graphics processing units (GPUs) and custom accelerators, which will likely soon be incorporated on-chip with regular processors. The resulting heterogeneous hardware presents another key challenge that the workshop target audience is working to address.
+4. Dynamic Compilation for High-Performance and Real-Time Environments
+Of ever-increasing importance are compilers that dynamically translate or optimize programs, not only to support interpreted languages such as Java, but also to exploit the run-time behaviour of programs written in C and C++ to improve efficiency and performance. Run-time adaptation can usually take advantage of more precise state information, allowing systems to present abstracted interfaces while ensuring an efficient implementation. Such layers of abstraction are important to allow programmers to efficiently target the emerging highly-parallel and heterogeneous hardware.
+5. Compilation, Optimization, and Analysis for Dynamic Languages
+The performance of scripting languages such as Python, Ruby, PHP, Javascript, and others, are of increasing importance to the overall performance of most online systems. These interpreted, and often dynamically-typed, languages pose many  challenges in terms of optimization design and analysis, requiring highly dynamic and adaptive techniques to overcome the lack of static information, language idioms, and novel workloads found in different execution contexts.
+6. Compilation Techniques for Reducing Power
+Reducing power consumption is a key challenge for all computer systems, from mobile devices through high-end supercomputers. Compilers that can optimize for power or coordinate the power-reduction features of other parts of the system are of great interest. This extends to the compiler itself, incorporating power-friendly methods in the context of dynamic compilation.
+7. Program Safety
+The size and complexity of many modern software projects makes programming errors both difficult to find and easy to produce. Compiler approaches have shown potential to improve code safety by detecting common bugs ahead of time or by automatically trapping more subtle errors at runtime. Such techniques are likely to play an increasing role in software development, lead to many analysis and runtime optimization challenges, and represent an interesting further application domain for software analysis.
+8. Whole System Optimization and Analysis
+Many applications are in practice run in a non-trivial context, along with other activities or programs. Individual program behaviours and resource competition then affect overall system performance. Designs that assess complementary or competitive behaviours, or that dynamically adjust individual execution to improve global system usage extend program optimization and analysis techniques to higher-level execution goals.
+9. Tools and Infrastructure for Compiler Research
+The changing technology landscape highlights the need for ever-improving compiler-based tools and infrastructure for understanding programs and performing research. Development of new analysis techniques and optimizations is facilitated by basic program exploration, profiling, and visualization, looking for further sources of semantic meaning that can be applied to improve performance, language design, or toward other optimization goals. 
+
+
+Continued language and hardware development requires continued effort to identify new sources of potential optimization, and develop novel techniques for new contexts. The workshop on Compiler-Driven Performance allows researchers to share progress in developing new approaches to existing problems and in identifying new optimization opportunities and performance vectors for current and future languages. The workshop has the additional benefit of both providing and demonstrating strong cooperation between academia and industry; compiler optimization research is a highly practical domain, but also one in which cutting-edge research techniques can have direct application, and work in both academic and industrial contexts is improved through this level of cooperation.

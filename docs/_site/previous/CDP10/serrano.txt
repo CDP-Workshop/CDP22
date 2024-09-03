@@ -1,0 +1,32 @@
+As the complexity of both machine architecture and software systems
+increases, it is likely that neither current static nor current
+dynamic compilation techniques are going to be adequate to handle
+emerging workloads. Limitations in static compilation analysis and
+resource constraints on dynamic compilers put an unnecessary burden on
+compiler infrastructures and reduce their effectiveness.
+
+We present a design for continuous program optimization systems (CPO)
+that combines static analysis and optimization with dynamic code
+generation and machine optimizations, which can be used in legacy
+applications for languages such as C/C++ and Fortran. Our programs are
+initially compiled statically with a "fat" executable information.  We
+leveraged existing JVM technology in our CPO runtime, such that
+programs can be dynamically loaded and recompiled using an existing
+Java dynamic compiler. By combining dynamic and static compilation, we
+allow the system to exploit the best features of either approach: a)
+static compilation which is very powerful but it could be expensive
+and limited by a lack of runtime information, and b) dynamic
+compilation which has access to a wealth of runtime information, but
+cannot afford expensive optimization algorithms. In addition, our
+infrastructure provides for extensive program behavior monitoring
+using hardware performance counters across the execution
+stack. Performance data is collected at runtime and used by the
+dynamic compiler as well as stored externally for post-run analysis
+and profile directed optimization in the static compiler.
+
+We present a case study for dynamically prefetching in PFLOTRAN, a
+large Fortran90 and C application for "Multiscale-Multiphase-
+Multicomponent Subsurface Reactive Flows". We leveraged dynamic
+profile obtained from hardware counters and software profiling
+instrumentation for dynamically inserting prefetching instructions.
+We achieved substantially performance improvements of up to 40%.

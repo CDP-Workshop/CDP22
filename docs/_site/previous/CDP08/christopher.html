@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Sampling-based Whole Program Locality Profiling</h1>
+
+The widening gap between processor speed and memory access time causes data
+locality to have an ever increasing impact on overall program
+performance. Improving locality primarily consists of augmenting memory layout
+and data access patterns. Unfortunately, improving just one of these may
+actually hurt the other. Thus, the two should be improved concurrently to
+maximize performance efforts.
+<p>
+
+Suggestions for Locality Optimizations Rochester (SloR) is a locality analysis
+tool that collects samples of accesses at run time and provides the programmer
+suggestions to improve both the spatial and temporal locality.  SloR is an
+extension of Slo, a tool originally developed by Kristof Beyls at the
+University of Ghent. Slo samples individual memory access reuses and provides
+suggestions to move reuses closer together. With only temporal locality
+information, it was able to halve execution times of several SPEC2000
+programs. Nonetheless, Slo is only concerned with temporal locality of data
+elements.
+<p>
+
+SloR preserves all the functionality of Slo and also provides a number of
+additional features. First, it provides feedback on so-called block
+sampling. Directly analyzing specific memory accesses leads to a false sense of
+understanding because cache blocks contain more than a single piece of
+data. Block sampling originates from this idea. In addition to analyzing
+specific memory elements, SloR also examines the temporal locality of memory
+blocks. SloR also provides a spatial locality ranking. It identifies the causes
+of poor spatial and temporal locality with the precision at least as fine as a
+single basic block. Finally, SloR provides feedback on the layout of fields
+within structures based on reference affinity. While full reuse distance would
+cause a slowdown by a factor in the hundreds, sampling based analysis is
+typically within a factor of ten of the original execution.
+
+
+    <hr>
+    <address><a href="mailto:steffan@krusty.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 26 09:54:46 EDT 2008 -->
+<!-- hhmts start -->
+Last modified: Tue Aug 26 09:55:57 EDT 2008
+<!-- hhmts end -->
+  </body>
+</html>

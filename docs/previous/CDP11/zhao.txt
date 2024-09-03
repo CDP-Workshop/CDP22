@@ -1,0 +1,36 @@
+Title: Improving Productivity with Fine-Grain Compiler-Based Checkpointing
+
+Authors: Chuck Zhao*, J. Gregory Steffan*, Cristiana Amza*, and Allan
+         Kielstra** *University of Toronto **IBM Toronto
+Speaker: Chuck Zhao
+
+Abstract:
+
+Checkpointing support allows program execution to roll-back to an earlier
+program point, discarding any modifications made since that point.  Existing
+software-based checkpointing methods are mainly libraries that snapshot all of
+working-memory, and hence have prohibitive overhead for many potential
+applications. Hardware-based checkpointing support could be more selective, but
+is not currently available in commodity systems.
+
+In this talk we present a light-weight, fine-grain checkpointing framework
+implemented entirely in software through compiler transformations and
+optimizations. A programmer can specify arbitrary checkpoint regions via a
+simple API, and the compiler automatically transforms the code to implement the
+checkpoint at the granularity of individual stores. Optimization passes reduce
+the checkpoint size and hence improve performance by identifying and
+eliminating redundant backup operations---in particular by analyzing memory
+allocation sites, arrays, and system calls, and then performing
+checkpoint-specific inlining, redundancy elimination, and hoisting passes.
+
+To demonstrate the utility of compiler-based checkpointing we explore two
+application areas. First, we investigate its application to debugging, in
+particular by providing the ability to rewind to an arbitrarily-placed point in
+a buggy program's execution---eliminating the need to restart a program from
+the beginning for every debug attempt.  A study using BugBench applications
+shows that our compiler-based approach is more than 100X less overhead than
+full-process checkpointing.  Second, we demonstrate that compiler-based
+checkpointing support can be leveraged to free the programmer from manually
+implementing and maintaining software rollback mechanisms when coding a
+backtracking algorithm, with runtime overhead of only 15% compared to the manual
+implementation.

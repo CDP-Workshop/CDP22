@@ -1,0 +1,33 @@
+Title: Reducing Trace Selection Footprint for Large-scale Java Applications without Performance Loss
+
+Authors: Peng Wu, Hiroshighe Hayashizaki, Hiroshi Inoue, Toshio Nakatani
+Speaker: Peng Wu
+
+Abstract:
+
+When optimizing large-scale applications, striking the balance between
+maximizing performance and preserving resources such as code size and
+compilation time has always been a grand challenge. While recent
+advances in trace compilation have demonstrated the feasibility of
+building a Java trace JIT that can support large-scale applications
+and have significantly reduced the performance gap to a mature method
+JIT, the size control aspect of a trace compilation system remains
+largely overlooked. For instance, we observe that about 40% of traces
+formed for the DataCop 9.12 and DayTrader 2.0 benchmarks are
+short-lived (e.g., with less than 500 execution count in steady-state
+runs) and code duplication across traces are excessive (up to 20
+times).
+
+In this paper, we systematically study the size control problem for a
+class of commonly used trace selection algorithms and propose a set of
+techniques to reduce the footprint of trace selection without
+incurring any performance loss. The crux of our approach is to target
+redundancies in trace selection in the form of either short-lived
+traces or unnecessary trace duplication. Using one of the best
+performing selection algorithms as the baseline, we demonstrate that,
+on the DaCapo 9.12 benchmarks and DayTrader 2.0 on WebSphere
+Application Server 7.0, our techniques reduce the code size and
+compilation time by 69% and the start-up time by 43% while retaining
+the steady-state performance. On DayTrader 2.0, an example of
+large-scale application, our techniques also improve the steady-state
+performance by 10%.

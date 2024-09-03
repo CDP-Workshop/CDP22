@@ -1,0 +1,28 @@
+
+10:30-12:00 Session A: Session Chair: Kit Barton
+
+10:30-10:55 GPAT: A Generalized Packing Analysis and Transformation, Caio Salvador Rohwedder, Nathan Henderson, João Paulo Labegalini de Carvalho, Yufei Chen and José Nelson Amaral
+
+11:00-11:25 LAGrad: Leveraging the MLIR ecosystem for Efficient Differentiable Programming, Mai Jacob Peng and Christophe Dubach
+
+11:30-11:55 Combining Run-time Checks and Compile-time Analysis to Improve Control Flow Auto-Vectorization, Bangtian Liu and Avery Laird
+
+
+01:00-02:45 Session B: Session Chair: J. Nelson Amaral, University of Alberta
+
+01:00-01:20 Robust Program Specialization using Equality Saturation, Jonathan Van der Cruysse and Christophe Dubach
+
+01:25-01:45 What Tests Can Tell Us About Program Safety, Patrick Lam
+
+01:50-02:20 Data Reshaping and Function Reusing for High-Level Synthesis with Functional IR, 	Tzung-Han Juang, Christof Schlaak and Christophe Dubach
+
+02:20-02:40 Memory Consistency and Program Transformations, Akshay Gopalakrishnan and Clark Verbrugge
+
+
+03:30-05:00 Session C: Session Chair: Christophe Dubach, McGill University
+
+03:30-03:55  Specializing Code to New Architectures via Dynamic Adaptive Recompilation, Tyler Gobran, João Paulo Labegalini de Carvalho, Quinn Pham, José Nelson Amaral, Nemanja Ivanovic and Christopher Barton
+
+04:00-04:25 Improved Machine Learning Strategy for OpenMP Target Offloading, Siddharth Kancharapu, Alok Mishra and Abid Malik
+
+04:30-04:55 Garbage Collection in WebAssembly, Nathan Sandum

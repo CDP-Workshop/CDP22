@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Machine Learning Applied to Method-Specific Compilation Strategies</title>
+  </head>
+
+  <body>
+    <h1>Machine Learning Applied to Method-Specific Compilation Strategies</h1>
+
+We describe our ongoing efforts towards developing a machine-learning
+approach to customize the code-transformation techniques used by the
+IBM Testarossa compiler when compiling each method.
+<p>
+The main idea is to characterize methods based on a set of features
+that can be quickly computed by the compiler before beginning each
+method compilation. A training phase explores the space of methods to
+be compiled through the application of a large set of combination of
+code transformations to methods, and by measuring both the
+compilation time and execution time for each method.
+<p>
+
+During runtime the features describing a method (e.g.: types of
+instructions, presence of loops, etc.) are used to predict which code
+transformations are likely to improve the execution time of a method
+based on the earlier learning phase.
+<p>
+
+The potential for this technique is that it may reduce the total time
+spent in a method by a JiT/JVM through the following changes: less
+time is spent during compilation because fewer code transformations are
+performed when a method is compiled; execution time may be reduced
+because transformations that may increase running time are not
+performed, and new transformations that may reduce running time may be
+performed based on the earlier learning phase.
+<p>
+
+Currently we are collecting information for SPECjvm98 benchmarks using
+the IBM Testarossa compiler.  Features are stored in compact,
+in-memory structures until the end of a measurement stage, at which
+point collected data are saved into a binary archive for later use in
+the learning stage.
+<p>
+
+With these data, we will be able to assess which machine learning
+approach (e.g: classification, regression, or clustering) is better
+suited for the learning problem, and then evaluate how it performs when
+compared to an unmodified IBM Testarossa JIT compiler.
+<p>
+
+This research also allow us to evaluate the current compilation
+heuristics built based on developers heuristics based on the compiler.
+<p>
+
+
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Thu Aug 27 09:51:42 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Thu Aug 27 09:52:20 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

@@ -1,0 +1,26 @@
+Automatic generation of source code can put extra stress on an
+optimizing compiler as the number of source statements increases
+dramatically compared to human generated code. Temporary data structures
+used within the compiler often do not scale well with increases in code
+size, as the corresponding envelope (eg. number of basic blocks, number
+of variables) of the code increase.
+
+An example of such a data structure is aliasing information, which
+determines which variables are aliased to other variables, for example
+in the C language: int *y = &x; Typically, aliasing information is
+represented as bit vectors on each variable, essentially forming a N x
+N matrix of booleans, A_ij, where N is the number of variables and A_ij
+is true if variable V_i is aliased to variable V_j. This information can
+take upwards of 100MB on such programs as normal bit vectors. However
+the information is sparse (A_ij is mostly false). For these reasons, the
+information is highly compressible, and it is typical to expect a very
+high compression ratio of around 100:1. This however cannot be achieved
+by usual sparse bit vector representations.
+
+We describe how we have achieved such compression ratios on IBM's
+optimizing compilers using some novel techniques on our aliasing
+representations. Such improvements have dramatic effects on reducing
+memory consumption, and hence reducing power requirements for our
+customers and internal IBM middleware development teams. The mechanism
+provided is relevant for language-agnostic optimizing compilers, where
+language rule-based compression is not appropriate.

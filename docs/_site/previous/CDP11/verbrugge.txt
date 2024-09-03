@@ -1,0 +1,22 @@
+Title: Abstract Analysis of Method-Level Speculation
+
+Authors: Clark Verbrugge, Allan Kielstra, Christopher J.F. Pickett
+Speaker: Clark Verbrugge
+
+Abstract: 
+
+Thread-level Speculation (TLS) is a technique for automatic
+parallelization that has shown excellent results in hardware
+simulation studies.  Existing studies, however, typically require a
+full stack of analyses, hardware components, and performance
+assumptions in order to demonstrate and measure speedup, limiting the
+ability to vary fundamental choices and making basic design
+comparisons difficult.  Here we approach the problem analytically,
+abstracting several variations on a general form of TLS (method-level
+speculation) and using our abstraction to model the performance of TLS
+on common coding idioms.  Our investigation is based on exhaustive
+exploration, and we are able to show how optimal performance is
+strongly limited by program structure and core choices in speculation
+design, irrespective of data dependencies.  These results provide new,
+high-level insight into where and how thread-level speculation can and
+should be applied in order to produce practical speedup.

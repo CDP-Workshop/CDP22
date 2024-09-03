@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Coconut</h1>
+
+The Coconut project is motivated by trends in processor models of
+which the Cell BE is an exemplar, and by the need to reliably apply
+multi-level code optimizations in safety-critical code to achieve high
+performance and small code size.  In this talk we will describe two
+recent achievements, and put them in context of the larger project:
+(1) the definition and scheduling of MultiLoops, and (2) a model for
+inter-core communication inspired by instruction level parallelism and
+a linear-time verification procedure for programs parallelized using
+this language.
+<p>
+
+A MultiLoop is a loop specification construct designed to expose in a
+structured way details of instruction scheduling needed for
+performance-enhancing transformations. We show by example how it may
+be used to make better use of underlying hardware features, including
+software branch prediction and SIMD instructions.  In each case, the
+use of MultiLoop transformations allows us to take full advantage of
+software branch prediction to completely eliminate branch misses in
+our scheduled code, and reduce the cost of loop overhead by using SIMD
+vector instructions.  We demonstrate feasibility (of zero branch
+misses) and evaluate performance (of transformations) on a wide set of
+representative examples from numerical computation. We include simple
+loops, nested loops, sequentially-composed loops, and loops containing
+control flow. In some cases we obtain significant benefits:
+\emph{halving} execution time, and \emph{halving} code size. As many
+details as possible  are provided for other compiler writers wishing
+to adopt our innovative transformations, including instruction
+selection for SIMD-aware control flow.
+<p>
+
+As the number of cores per chip increases, and especially if the
+complexity of the on-chip network increases, performance will depend
+on fine-grain scheduling of the type used by compilers and on-chip
+hardware to take advantage of instruction level parallelism.  We
+present a simple model for distribution of computation in this
+environment, explain why it represents the type of concurrency which
+is efficient now and will scale well in the future, argue that
+hardware to maintain the illusion of sequential execution is not
+scaleable, and hence software verification is required, and present a
+linear-time method of verifying programs whose concurrency is
+expressed using the language we define.
+
+
+    <hr>
+    <address><a href="mailto:steffan@krusty.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 26 10:03:11 EDT 2008 -->
+<!-- hhmts start -->
+Last modified: Tue Aug 26 10:04:04 EDT 2008
+<!-- hhmts end -->
+  </body>
+</html>

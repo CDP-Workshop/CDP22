@@ -1,0 +1,17 @@
+Thread-level speculation (TLS) is a promising, hardware-centric
+technique for automatic parallelization. Software approaches to
+TLS have been recently explored, however, bypassing the need for
+specialized hardware designs, but tend to focus on source or VM-level
+implementation aimed at a specific language and runtime environment.
+This paper proposes a novel software TLS approach purely based on the
+LLVM intermediate representation (IR), a language and architecture
+independent IR supporting more than 10 source languages and target
+architectures by many projects. This design allows speculation of
+all LLVM programs on all architectures supported by LLVM, requiring
+only minimal code modifications to language front-ends to enable
+programmer-directed specification of speculation fork points. We
+demonstrate our system using the llvm-gcc 2.9 C/C++ and Fortran
+front-ends, and evaluate performance on a 40-core Intel Xeon machine.
+Our work provides a practical system for further TLS research and
+directly supports safe, user-directed parallelization of real-world
+applications on multi-core processors.

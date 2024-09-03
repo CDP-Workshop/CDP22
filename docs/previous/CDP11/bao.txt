@@ -1,0 +1,24 @@
+Title: Modeling Cache Sharing for MPI Programs on Multicore Machines
+
+Authors: Bin Bao, Chen Ding
+Speaker: Bin Bao
+
+Abstract:
+
+The emergence of chip multiprocessors has enriched the computation
+resource available for large-scale scientific computing where Message
+Passing Interface (MPI) is the dominant programming model. Meanwhile,
+multi-core architecture raises new challenges to MPI
+applications. Memory system contention is a major problem and has been
+studied extensively. Recent advances in cache sharing models provide
+an opportunity to dissect the cause of the memory system contention,
+in particular, to separate the effect of MPI program parallelization
+from the effect of MPI task interaction.
+
+In this talk, we present two scaling models: one for MPI task
+partitioning, and the other for MPI cache sharing. We show that
+programs have different patterns in task partitioning but the patterns
+are consistent for the same program. The pattern can be exposed
+through training analysis, task normalization, and linear regression
+analysis. We show the effectiveness of our models using several MPI
+benchmarks.

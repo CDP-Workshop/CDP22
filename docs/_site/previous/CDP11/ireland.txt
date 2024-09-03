@@ -1,0 +1,25 @@
+Title: Detecting Type-Based Aliasing Violations in C
+
+Authors: Iain Ireland, Jose Nelson Amaral, Shimin Cui, Raul Silvera
+Speaker: Iain Ireland
+
+Abstract:
+
+The goal of an alias analysis is to compute the set of variables that
+can access a given memory location. An accurate alias analysis is
+critical for many back-end optimizations. Type-based alias analysis is
+a straightforward concept: two variables of different types should not
+be aliases for the same memory location. The C language specification
+details the situations in which aliasing may legally occur. However,
+many real-world programs violate the C specification.  As a result,
+type-based alias analysis is often disabled, eliminating any benefits
+it would have provided in the sections of the program where the type
+restrictions are respected.
+
+We present a demand-driven analysis implemented in the IBM XL C
+compiler. This new analysis identifies assignments that could
+potentially lead to a memory state that violates the C specification.
+This analysis is an important step towards a type-based alias analysis
+that remains safe even in the presence of violations. The analysis can
+also provide a report to the programmer about violations of typing
+rules.

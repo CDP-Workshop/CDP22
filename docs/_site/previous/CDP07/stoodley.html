@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Challenges Facing Effective Native Code Compilation in a Modern Just-In-Time Compiler</h1>
+
+The Java Virtual Machine (JVM) is under constant pressure from Java
+application designers to deliver ever increasing performance
+out-of-the-box. Of the major components in the JVM, the Just-In-Time (JIT)
+compiler component holds the highest responsibility for performance and
+tends to have the greatest influence on a Java application's performance.
+The IBM Testarossa JIT compiler faces a number of challenges to delivering
+the level of performance expected by our customers, from recognizing and
+transforming application features and behaviours that can be effectively
+improved to generating high quality code for the exact target processor on
+which the application is running, to controlling the use of compilation
+resources to most effectively translate Java application code to native
+code.  It is this third category that is the main topic of this talk.
+<p>
+
+The compilation control subteam of the Testarossa development team was
+formed to increase our focus on mitigating the problems facing the
+effective use of compilation resources in the many different environments
+in which the JIT compiler is employed.  For example, compiling native code
+when starting a server faces different challenges than when compiling
+native code for server throughput or for a real-time application.
+Furthermore, applications themselves vary widely so that effective
+compilation for a program with hotspots requires different techniques than
+a program with a flat profile. The effectiveness of the JIT compiler can
+also be measured in a number of different ways that are of varying
+importance to our customers.  Several examples are: how much time is spent
+compiling, how long the application is paused while compilation occurs,
+how much the throughput performance of the application is improved, how
+quickly the performance of the application is improved, how much
+performance varies from run to run, etc.  Improving any one of these
+metrics generally has a bad effect on at least one of the other metrics,
+so appropriately balancing these issues in a dynamic environment
+consistently across different platforms to keep our customers happy is one
+of the main goals of the compilation controller component in the JIT.  In
+this presentation, I will talk in more detail about the set of challenges
+facing the compilation controller in a dynamic JIT compiler as well as
+give a broad overview of some of the JIT compilation technologies that
+have been impacted.
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:28:09 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:23:26 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

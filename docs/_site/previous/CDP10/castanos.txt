@@ -1,0 +1,28 @@
+There has been a recent surge in interest in compiling dynamic
+scripting languages (DSL), such as Javascript, Python, PHP, and Lua,
+to improve performance. The most popular implementations of DSL today
+are primarily interpreted and can be 10 to 1000 times slower than C or
+C++. Given this performance disparity, one might expect compilation to
+easily yield magnitudes of performance improvement. To our surprise,
+performance improvement from DSL compilers today is still quite
+elusive, where speed-up factors are typically within 2X (with one
+notable exception of TraceMonkey for some Javascript workloads). In
+some cases, DSL JIT can also incur significant slowdown.
+
+In this talk, we will examine various approaches taken by today's DSL
+compilers with a special focus on Python. Python offers almost every
+flavor of JITTing approach taken by the community, such as attaching
+an existing optimizer (LLVM ) to the CPython interpreter
+(Unladen-swallow), converting Python to an intermediate language with
+a mature JIT (e.g., Jython and IronPython), exploring trace JIT
+(PyPy), and exploring runtime type specialization (Psyco), We observe
+two interesting directions taken in today's Python JITs: one is to
+compile primarily at the level of the language implementation and
+runtime (bottom-up approach), the other is to customize existing
+optimizers designed for statically typed languages to compile DSLs. We
+will discuss the trade-offs and limitations of both approaches.
+
+We will also briefly talk about our early experience in building a JIT
+compiler for Python in our ongoing FIORANO project and the
+optimization space we are exploring, including simple JITting, Python
+bytecode level optimization, runtime feedback, and tracing.

@@ -1,0 +1,58 @@
+# Where things are
+source:       .
+destination:  ./_site
+layouts_dir:  _layouts
+
+# Handling Reading
+exclude:              [
+  "*/README.md",
+  "Gemfile",
+  "Gemfile.lock",
+  "README.md"
+]
+keep_files:           [".git"]
+encoding:             "utf-8"
+strict_front_matter: false
+
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Outputting
+permalink:     /:year/:title/
+timezone:      null
+
+quiet:    false
+verbose:  false
+defaults:
+  -
+    values:
+      layout: "default"
+
+liquid:
+  error_mode: warn
+
+
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+
+# Extensions
+plugins:
+  - jekyll-redirect-from  # enable "refirect_from" in front matter
+
+sass:
+  style: compressed
+
+copyright:
+  year: 2022
+

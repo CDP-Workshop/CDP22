@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Practical Assignment Sinking for Dynamic Compilers</h1>
+
+Assignment sinking improves the efficiency of programs by avoiding variable
+assignments on paths where the variable isn't used.  A single assignment is
+partially live if its value is used on one execution path and not on
+another path.  By sinking the assignment onto the path where the value is
+used, the other path is made more efficient.  In many cases, the path to
+which the assignment is sunk is also made more efficient because the
+generated code quality can be improved. Assignment sinking has
+traditionally been accomplished using the classic Partial Redundancy
+Elimination (PRE) framework.  But PRE involves several dataflow analyses to
+identify the optimal program points for each assignment which limits its
+usefulness in scenarios where compile time is important, such as in a
+dynamic compiler.  In this talk, we describe a more efficient method to
+sink assignments using fewer dataflow analyses.  This algorithm has been
+implemented in the TestaRossa Just-In-Time compiler in the IBM Developer
+Kit for Java
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:29:00 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:23:47 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

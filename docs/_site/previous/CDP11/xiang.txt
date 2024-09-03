@@ -1,0 +1,25 @@
+Title: Footprint-based Locality Analysis
+
+Authors: Xiaoya Xiang, Bin Bao and Chen Ding (University of Rochester)
+Speaker: Xiaoya Xiang
+
+Abstract:
+
+Locality analysis traditionally focuses on data reuse patterns, in
+particular, the reuse distance of each access.  At fine granularity
+such as cache blocks, the full analysis causes hundreds to thousands
+of times slowdown.  Sampling, a common statistical tool, cannot reduce
+the cost by simply lowering the sampling rate, because it may still
+have to examine the whole trace to identify the next use of a sampled
+datum.
+
+An alternative locality model is footprint, the amount of data
+accessed in an execution window.  Recent advances have made it
+possible to measure all-window footprints.  In this talk, we show the
+relation between the new footprint statistics and the traditional
+locality statistics.  By connecting the two, we reduce the cost of
+off-line modeling of cache sharing by over 200 times and enable
+on-line locality analysis through parallel sampling at a marginal
+cost.  The results show empirically, with overwhelming evidence, a
+simple relation between all-window statistics and reuse-window
+statistics.

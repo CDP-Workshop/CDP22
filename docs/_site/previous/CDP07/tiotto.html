@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+
+<h1>Identifying Aliasing Violations in Source Code</h1>
+
+In the process of translating source code to target code, optimizing 
+compilers reorder program instructions to improve the runtime performance 
+of the generated target code. The amount of instruction reordering an 
+optimizing compiler can safely perform is limited by the presence of 
+aliasing between memory references. Programming languages have established 
+rules, known as alias rules, which describe which memory references may 
+alias one another, that is, an aliasing rule specifies whether two memory 
+references are allowed to potentially access the same or overlapping 
+memory locations. If the program being compiled does not conform to the 
+alias rule in effect, the compiler might optimize the program in such a 
+way as to modify its intended semantics.
+Violations of the alias rules can lead to runtime failures especially when 
+the program is compiled at the highest optimization levels, or in time as 
+code optimizers evolve to take advantage of previously unexploited code 
+specialization or optimization opportunities. To mitigate the problem, the 
+program may be recompiled using a less restrictive alias rule. However the 
+use of a relaxed alias rule may severely impact the performance 
+improvements a compiler can achieve. For this reason, correcting the 
+aliasing violations in the program source is preferred, although a 
+difficult and time consuming task.
+The algorithm we have implemented facilitates the task of identifying the 
+aliasing violations in a program. In particular it allows the 
+identification and diagnostic of dereferences that potentially violate the 
+aliasing rules in effect. Furthermore it allows the compiler to generate a 
+report which includes, for each potential violation identified, the 
+locations in the source program of the pointer assignments leading to the 
+illegal dereference. 
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:09:50 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:24:33 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

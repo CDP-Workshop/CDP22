@@ -1,0 +1,20 @@
+On-stack replacement (OSR) is a technique which allows a virtual machine
+to interrupt running code during the execution of a function/method, to
+reoptimize the function on-the-fly using an optimizing JIT compiler, and
+then to resume the interrupted function at the point and state at which
+it was interrupted. OSR is particularly useful programs with potentially
+long-running loops, as it allows dynamic optimization of those loops as
+soon as they become hot.
+
+In this paper, we present a modular approach to implementing on-stack
+replacement that can be used by any system that targets the LLVM SSA
+intermediate representation, and we demonstrate the approach by using
+it to support dynamic inlining in McVM. McVM is a virtual machine for
+Matlab which uses a LLVM-based JIT compiler. Matlab is a popular
+dynamic language for scientific and engineering applications which
+typically manipulate large matrices and often contain long-running
+loops, and is thus an ideal target for dynamic JIT compilation and OSRs.
+
+Using our McVM example, we examine the overheads of using OSR on a
+suite of Matlab benchmarks, and we show the potential performance
+improvements when using it to perform dynamic inlining.

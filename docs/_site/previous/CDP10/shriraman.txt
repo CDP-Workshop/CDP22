@@ -1,0 +1,42 @@
+While technology advances have enabled designers to provide improved
+computing resources, energy and power consumption have become the
+primary design constraints. Increasing transistor budgets will only
+lead to larger fractions of the chip being relegated to dark
+(inactive) silicon. Given a specific algorithm, the ability to expose
+the parallelism and express the intent algorithm clearly depends on
+the types of instructions provided by the ISA to the compiler. Our
+premise to make effective use of the hardware future ISAs will need to
+return to the traditional CISC philosophy with a modern
+twist---specifically, using encodings that convey more programlevel
+intent to hardware. Such 'big instructions' can capture higher-level
+operations (e.g., FFT, mpeg encoding) amenable to execution on
+specialized accelerators and reduce the energy per-operation.
+
+Compilers need to play an active role in defining and exploiting big
+instructions. Modern applications make extensive use of libraries and
+templates, and spend a significant fraction of their time in these
+libraries.  Preliminary analysis suggests that library APIs may be a
+valuable source of complex instructions' definitions.  Compilers need
+to choose amongst the multiple complex high-level instructions (or
+sequences of instructions) which can accomplish the same operation
+based on new constraints like energy.
+
+The specialized accelerators (e.g., IBM Cell SPEs, Crypto Coprocessor)
+also express varied types of parallelism and have different execution
+models. Software support is needed to decide upon the schedule to map
+the appropriate parts of the program on these accelerators; a robust
+programming model with OpenMP style pragmas can provide hints to about
+the program. A major challenge is typically the separation of memory
+space between accelerators. If compilers can set up and manage the
+data communication to the accelerators it will ease the task of
+porting general purpose code to accelerators. When doing so, there
+also is a need to model the energy and performance cost involved with
+moving data. For example, the overheads of setting up an SSE or VMX
+registers slows down a program if it has only short vector
+operations. Finally, a feedback mechanism is needed to inform the
+programmer on the challenges encountered when trying to map a specific
+code block to the accelerator. This might help the programmer
+restructure the program to aid the compiler. Overall, in this talk we
+will categorize the research challenges, provide examples of current
+generation accelerators, and try to instigate discussions on the role
+of the compiler in accelerating general-purpose workloads.

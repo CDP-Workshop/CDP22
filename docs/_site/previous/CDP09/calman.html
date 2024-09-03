@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Increasing the scope and resolution of Interprocedural Static Single Assignment
+</title>
+  </head>
+
+  <body>
+    <h1>Increasing the scope and resolution of Interprocedural Static Single Assignment</h1>
+
+While intraprocedural Static Single Assignment (SSA) is ubiquitous in
+modern compilers, the use of interprocedural SSA, although seemingly a
+natural extension, is limited. We find that part of the impediment is due
+to the narrow scope of variables handled by previously reported
+approaches, leading to limited benefits in optimization.
+<p>
+In this talk, we present our Interprocedural SSA (ISSA) construction
+algorithm where the scope is extended to include record elements and
+singleton heap variables. We show that ISSA scales reasonably well (to all
+MediaBench and most of the SPEC2K) and demonstrate the effectiveness of
+interprocedural copy propagation and interprocedural liveness analysis in
+reducing input and output instructions. ISSA is then leveraged for
+constant propagation and dead code removal, where 11.8% additional
+expressions are folded. Lastly, we discuss future research directions.
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Wed Aug 26 18:01:53 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Wed Aug 26 18:20:34 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

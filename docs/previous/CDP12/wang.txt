@@ -1,0 +1,20 @@
+This presentation will give an update on the performance evaluation of
+the hardware support for transactional memory (TM) on the Blue Gene/Q
+(BG/Q) machine. It will describes an end-to-end system implementation
+of the TM programming model on top of the hardware transactional memory
+(HTM) of the Blue Gene/Q (BG/Q) machine. The TM programming model
+supports most C/C++ programming constructs on top of a best-effort HTM
+with the help of a complete software stack including the compiler, the
+kernel, and the TM runtime.
+
+This extensive evaluation of the STAMP benchmarks on BG/Q is the first
+of its kind in understanding characteristics of running coarse-grained
+TM workloads on HTMs. The study reveals several interesting insights on
+the overhead and the scalability of BG/Q HTM with respect to sequential
+execution, coarse-grain locking, and software TM.
+
+A version of this talk will be presented at PACT 2012 in Minneapolis in
+September (it has been nominated as one of the three best papers for
+PACT 2012). The presentation at CDP will include additional benchmarks
+as well as a complete comparative analysis of the performance using
+short-running X long-running mode.

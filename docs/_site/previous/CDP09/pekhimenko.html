@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Assist Threads for Data Prefetching in IBM XL Compilers</title>
+  </head>
+
+  <body>
+    <h1>Assist Threads for Data Prefetching in IBM XL Compilers</h1>
+
+Processor chips in development today typically support multiple hardware
+threads of execution.  When an application does not exhibit enough parallelism
+to effectively use all available threads, the extra threads can be used as
+assist threads to prefetch data for the main thread, and thus improve
+performance.  In our model, the main thread performs all useful work in the
+application.  Work done in the assist thread is not necessary for correct
+execution of the application, nor does it interfere with any results generated
+by the application.  Thus, we can throttle assist thread execution or skip work
+in the assist thread in order to synchronize with the main thread.  In this
+paper, we describe the IBM XL compiler transformation that automatically
+generates prefetching code for the assist thread, and optimizes the resulting
+multi-threaded code by inserting synchronization.  We also describe the runtime
+system that is used to control execution of the assist thread with respect to
+the main thread. We present experimental results that show the potential
+benefit of using assist threads to prefetch data in a system with Power5
+processors.
+
+
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Wed Aug 26 17:51:19 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Wed Aug 26 17:52:21 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

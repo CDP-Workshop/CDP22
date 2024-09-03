@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Eliminating Affinity Tests and Simplifying Shared Accesses in UPC</h1>
+
+Unified Parallel C (UPC) is a parallel SPMD dialect of C that provides a
+Partitioned Global Address Space (PGAS). The language supports shared arrays
+that can be accessed in the same fashion as regular C arrays. Thus the
+programmer is freed from low level issues such as communication. While
+UPC improves programming productivity substantially over alternative
+approaches such as MPI, aggressive compiler optimizations are vital for
+performance of UPC programs. We present two such optimizations implemented
+in the IBM xlupc compiler.
+<p>
+
+The first challenge is dealing with shared memory accesses. Shared memory
+accesses in UPC are usually converted to calls to the runtime system (RTS).
+xlupc implements a compiler optimization called locality analysis that
+determines at compile time which array accesses are local. The compiler then
+inserts memory loads and stores to local adresses instead of inserting
+the expensive RTS calls. The second challenge is dealing with
+the "upc_forall" control construct provided by UPC. The upc_forall statement
+includes an 'affinity test' to determine, at runtime, the iterations
+to be executed by each thread. We present a compile-time analysis
+implemented in xlupc to eliminate affinity tests when possible. Simple
+benchmark results show that the two optimizations applied together can
+yield substantial (sometimes  1000% or more) improvement in the
+execution time of the application.
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:31:16 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:25:16 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

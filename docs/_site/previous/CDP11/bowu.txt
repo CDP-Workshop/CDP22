@@ -1,0 +1,27 @@
+Title: Program Behavior Sequence Prediction
+
+Authors: Bo Wu, Yunlian Jiang, Xipeng Shen
+Speaker: Bo Wu
+
+Abstract:
+
+Effective prediction of program dynamic behaviors is essential for
+program optimizations and beyond. Most prior explorations have
+concentrated on prediction accuracy, but largely ignored the other two
+important aspects, prediction scope and proactivity.  This paper
+describes our exploration towards the development of sequence
+predictors, which, at one time point, predicts a sequence of program
+behavior instances rather than a single instance as traditional
+predictors do. Moreover, in many cases, a sequence predictor is able
+to predict even before the current execution sees the first instance
+of the target behavior, offering high proactivity. To overcome the
+special challenges for sequence prediction that arise from context
+variations, weakened behavior locality, and pattern variety, we
+propose a solution that exploits intra-behavior pattern recognition
+and inter-behavior correlation analysis synergistically. Experiments
+on loop trip-count prediction demonstrate that the proposed approach
+makes it feasible to construct sequence predictors that forecast
+program behaviors in a large-scoped, proactive manner, hence opening
+up many new opportunities for program optimizations and
+parallelization, system resource management, and architectural
+reconfigurations.

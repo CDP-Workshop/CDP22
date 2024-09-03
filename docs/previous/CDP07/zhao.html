@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Compiler Optimization Framework for Light-Weight Software-Only Checkpointing</h1>
+
+Speculative techniques have generated much interest as multi-core architecture
+is becoming increasingly popular.  Any speculative technique needs to
+checkpoint programs memory states so that unsuccessful speculations can be
+recovered thoroughly and safely. Current bottleneck on checkpointing is the
+high software overhead of creating, saving and restoring individual checkpoints
+without hardware support.
+<p>
+
+In this talk, we present a light-weight software-only checkpointing framework
+that heavily leverages on compiler analysis and runtime techniques to
+aggressively optimize checkpointing performance.  Programs are instrumented on
+source level through either programmer or compiler introduced annotations.
+Individual memory location is backed up only if there is a memory write into
+it.  Optimizations focus on hoisting backup function calls from within loops
+and aggregating multiple backup calls into a single one covering a consecutive
+memory range, so that i) the number of backup calls is minimized and ii) the
+amount of to-be-copied memory is minimized. Finally, each memory backup
+operation is optimized from a function call into one or a few memory copy
+instructions, with only necessary bookkeeping structures for recovery.
+
+
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:19:12 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:24:54 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

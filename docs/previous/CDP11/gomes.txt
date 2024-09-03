@@ -1,0 +1,26 @@
+Title: Applying Flow-Graph Mining to the Performance Analysis of Flat-Profile Applications
+
+Authors: Carolina Simoes Gomes (University of Alberta), Jose Nelson Amaral (University of Alberta),
+         Li Ding (IBM Toronto), Arie Tal (IBM Toronto), Joran Siu (IBM Toronto)
+Speaker: Carolina Simoes Gomes
+
+Abstract:
+
+Typically business applications are difficult to tune for performance
+because they have flat profiles with no discernible hot-spots.  We
+present a solution that provides developers with insights into
+execution patterns that take up significant time, but do not appear as
+hot-spots in an execution profile because they are dispersed in the
+application's code.  Run-time information such as hardware events,
+tick counts per instruction and edge frequencies, plus
+source-code-related information collected by static analysis, can be
+used to assemble an Execution Flow Graph (EFG) for each method in the
+program. The EFG abstraction is then used by a new graph mining
+algorithm, FlowGSpan, to search for frequent patterns
+(sub-graphs). These patterns may be execution patterns, composed of
+hardware events mapped to instructions, or source-code patterns, made
+of basic blocks with respective source code-level characteristics and
+mapped to source lines. The presentation includes a description of
+FlowGSpan, optimizations to the algorithm and a performance comparison
+with FlowGSP (sequential pattern mining algorithm that also uses
+EFGs).

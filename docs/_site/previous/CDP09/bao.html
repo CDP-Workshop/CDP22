@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Compiler Optimization to Increase Communication-Communication Overlapping in MPI Programs</title>
+  </head>
+
+  <body>
+    <h1>Compiler Optimization to Increase Communication-Communication Overlapping in MPI Programs</h1>
+
+Non-blocking point-to-point communication in MPI programs can be used to hide
+communication time, by overlapping one communication with computation or other
+communication. A simple example for communication-communication overlapping is
+a loop containing a non-blocking receive operation, where starting receiving in
+one iteration does not have to wait for the completion of previous receive
+operations as long as it does not violate any dependence.
+<p>
+
+However, the communications are not always written in non-blocking form and it
+maynot be obvious for the programmer to do manual transformation. We propose a
+compiler optimization to overlap communication-communication as much as
+possible for loopscontaining MPI send/receive operations. Our algorithm is
+derived from the classic vectorization algorithm, which is based on data
+dependence, and the condition to"vectorize" a send/receive operation is that no
+dependence on the send/receive buffer is involved in a dependence cycle. Based
+on the dependence graph, the algorithm constructs the set of Strongly Connected
+Component (SCC), and after reducing each SCC into asingle node on the graph,
+the algorithm further topologically sorts the nodes into a worklist. Then the
+algorithm iterates the worklist, and if the current node contains any blocking
+MPI send/receive operation that qualifies the dependence requirement, it
+will transform the operation into non-blocking form and sink the wait operation
+outside of the loop. The loop may be distributed if necessary. Also some
+additional transformations, e.g. scalar expansion, can be applied to eliminate
+certain dependences.
+<p>
+
+The communication-communication overlapping algorithm is being developed in
+the IBM compiler TPO component. By applying the transformation manually on our
+testing kernels, we show that our optimization can reduce the communication time
+by 13% on a run with 32 processors.
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Wed Aug 26 18:16:07 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Wed Aug 26 18:21:38 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

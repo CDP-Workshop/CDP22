@@ -1,0 +1,8 @@
+So, what is wrong with C11/C++11? What is still missing from OpenMP? What
+problems are there in integrating Transactional Memory with legacy code? I
+argue that all these standards are trying to do similar things. They all
+are trying to cover weak points in their specification or their base
+language, by trying to take us to a future direction that is clearly
+missing in today's standards. This talk will be about what is missing in
+today's base languages that makes them nothing more then beautiful
+scripting languages, unless we do something.

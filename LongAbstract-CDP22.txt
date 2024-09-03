@@ -1,0 +1,11 @@
+
+In 2002 the late Laurie Hendren suggested that there should be a venue for researchers and developers in the area of compilers in Canada and that the IBM Centre for Advanced Studies Conference (CASCON) would be a good venue for it. As was typical of Laurie's style to get things done, she immediately delegated the responsibility. We recruited Bob Blainey to be the third co-chair of the first CDP, along with J. Nelson Amaral. There were more than one hundred people attending the first event in a room that was too small for it. The name of the workshop, Compiler-Driven Performance, was inspired on a talk given by Kevin Stoodley at the time which demonstrated that a significant portion of the performance advance due to a new version of a processor was delivered by advances in compiler technology that helped explore the advances in the processor architecture.
+
+The workshop has been a great success and a gathering place for compiler research and development, including several professionals from the USA, and even from Brazil over many years. It became a known venue for the presentaion of recent relevant work. The format of the workshop, where we do not require the submission of manuscripts, do not publish proceedings, and do not require the presentation of original work, enables researchers and develpers to present their most recent work in progress or the most recent relevant work. The close scrutiny of the presented worker by developers from active compiler teams ensures that often new insights are revealed during the question-and-answer part of each presentation.
+
+After a hiatus of two years because of the pandemic, we are excited with the return to an in-person presentations and discussions at the 19th edition of CDP. The new venue in downtown Toronto brings uncertainty but also brings new possibility for interactions. This edition brings discussions about intermediate representaions. program transformations, program specialization, code specialization, testing, improvements to machine learning, and web-based representations.
+
+We are looking forward to welcoming old and new friends at the workshop.
+
+J. Nelson Amaral - University of Alberta
+Kit Barton - IBM Canada

@@ -1,0 +1,64 @@
+---
+title: CDP Program
+---
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+<h1>Program</h2>
+	
+<h2>06 November 2019</h2>
+<table class="program"><tbody>
+    <tr>
+      <td><b>Session 1:</b></td> <td> Chair: J. Nelson Amaral - University of Alberta<td>
+    </tr>
+    <tr>
+      <td>10:45 - 10:50</td> <td> Welcome by Clark Verbrugge </td>
+    </tr>
+    <tr>
+      <td>10:50-11:20</td> <td> <a href="">Improving Database Query Performance with Automatic Fusion</a> Hanfeng Chen, Alexander Krolik, Bettina Kemme, Clark Verbrugge and Laurie Hendren </td>
+    </tr>
+    <tr>
+      <td>11:20-11:50</td> <td> <a href="">Regret-Free Compilation: An Optimization Framework for Recompiling SQL Queries on the Fly</a> Prashanth Menon, Todd Mowry and Andrew Pavlo </td>
+    </tr>
+    <tr>
+      <td>11:50-12:15</td> <td> <a href="">Sorting on GPUs</a> Jason Pizzuco, Alexander Krolik and Clark Verbrugge </td>
+    </tr>
+    <tr>
+      <td>12:15 - 13:00</td> <td><b>Lunch</b></td>
+    </tr>
+
+    <tr>
+      <td><b>Session 2:</b></td> <td> Chair: Clark Verbrugge - McGill University<td>
+    </tr>
+    <tr>
+      <td>13:00-13:30</td> <td> <a href="">OMPSan: Static Verification of OpenMP's Data Mapping Constructs</a> Prithayan Barua, Jun Shirako and Whitney Tsang </td>
+      </tr>
+	<tr>
+      <td>13:30-14:00</td> <td> <a href="">Accelerating Task Parallelism using a RISC-V Engine</a> Lucas Morais, Vitor Silva, Alfredo Goldman, Carlos Álvarez, Jaume Bosch, Michael Frank, Guido Araujo </td>
+    </tr>
+    <tr>
+      <td>14:00-14:30</td> <td> <a href="">A detailed multilevel look at PHP compilation performance</a> Naser Ezzati-Jivan, Wahab Hamou-Lhadj and Michel Dagenais</td>
+    </tr>
+
+    <tr>
+      <td>14:30 - 15:15</td> <td><b>Nutrition Break</b></td>
+    </tr>
+
+    <tr>
+      <td><b>Session 3:</b></td> <td> Chair: Whitney T Tsang - IBM Canada <td>
+    </tr>
+
+    <tr>
+      <td>15:15-15:45</td> <td> <a href="">A structure-driven performance analysis of sparse matrix-vector multiplication</a> Prabhjot Sandhu, Clark Verbrugge and Laurie Hendren </td>
+    </tr>
+    <tr>
+      <td>15:45-16:15</td> <td> <a href="">Exploiting the z15: Compute Digital Signature Authentication instruction in the Go language system</a> Bill O'Farrell </td>
+    </tr>
+    </tbody></table>
+      </div> <!-- /.col-lg-12 -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</section>
+

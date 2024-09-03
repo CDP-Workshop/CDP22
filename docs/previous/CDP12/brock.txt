@@ -1,0 +1,13 @@
+Collaborative caching allows software to use hints to influence
+cache management in hardware. Recent studies have shown that such
+collaboration can achieve optimal cache replacement, at least in theory.
+
+Pacman is a practical solution for collaborative caching in loop-based
+code. Pacman uses profiling to analyze the patterns of optimal cache
+management in order to determine which data to cache and at what time.
+It then splits each loop into different parts at compile time so the
+loop boundary can be adjusted at run time to selectively store active
+program data in the available cache space. Pacman requires a single bit
+at the load and store instructions. Some of the current hardware has
+partial support. We will present results using both simulated and real
+systems.

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Automatic SIMD code generation for complex arithmetic reduction for architecture lacking cross data-path support</title>
+  </head>
+
+  <body>
+    <h1>Automatic SIMD code generation for complex arithmetic reduction for architecture lacking cross data-path support</h1>
+
+For machines with SIMD units without cross data-path support, such as VMX or
+SPU, implementing operation such as complex multiply can be expensive in the
+number of data reorganization operations that are needed.  However, we have
+observed that reduction for complex multiply is common in user code and
+reduction itself presents a good opportunity for minimizing the number of data
+reorganization operations.  We therefore present our novel approach in
+efficiently SIMDizing complex multiply reduction using VMX as a test platform,
+and demonstrate that it brings significant performance improvement in
+comparison to a naive implementation.
+
+
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Wed Aug 26 17:58:34 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Wed Aug 26 17:58:51 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

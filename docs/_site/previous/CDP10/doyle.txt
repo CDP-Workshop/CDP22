@@ -1,0 +1,16 @@
+The JVM offers an attractive platform to implement dynamic languages, 
+with widespread platform support, automatic memory management, and large 
+class libraries. Typically, reflection is required to support dynamic 
+features not available in Java, and that leads to poor performance. 
+Achieving high performance typically requires the interpreter to 
+generate custom bytecode, effectively turning the interpreter into a 
+compiler, with all the associated complexity, yet without the raw power 
+that comes from running on the bare metal.
+
+The JSR292 proposal aims to offer dynamic languages the performance of a 
+compiler for the complexity of an interpreter. Compared to reflection, 
+JSR292 is highly streamlined and optimizable, leaving the task of 
+compiling and optimizing code where it belongs: in the JIT compiler.
+
+In this talk, we describe the capabilities offered by JSR292, and 
+outline the optimization challenges it presents to the JIT compiler.

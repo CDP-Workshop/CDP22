@@ -1,0 +1,16 @@
+Region-based garbage collectors offer a reduction in average application
+pause times (or even maximum pause time guarantees for real time
+systems) by placing bounds on the amount of work a garbage collector
+must perform each collection cycle. The heap is typically partitioned
+into regions containing a subset of objects on the heap. Arrays,
+however, can be arbitrarily long and can exceed the size of an
+individual region, defeating the benefits (or guarantees) of a
+region-based collector. To counter that, arrays can be fragmented
+into multiple, discontiguous arraylets that are sized to fit within
+a region and can be processed independently. While they are an
+effective solution to maintain lower pause times, their non-contiguous
+representation poses challenges for compiler optimizations and memory
+access throughput. This talk will discuss these challenges and describe
+an efficient hybrid arraylet representation that allows arrays to have
+a contiguous-discontiguous duality. Modifications to a Just-In-Time
+compiler to efficiently handle arrays of either shape will be presented.

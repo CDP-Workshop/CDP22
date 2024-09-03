@@ -1,0 +1,25 @@
+Field-Programmable Gate Arrays (FPGAs) are integrated circuits that are
+organized such that they can be programmed and reprogrammed to emulate a
+hardware design that exactly matches the requirements of an application,
+and hence can potentially have much better performance-per-watt than
+alternatives. This has led to growing commercial interest (including
+IBM) in using FPGAs for general-purpose and scientific computing. To
+ease the programming task for non-hardware-expert programmers, systems
+are emerging that can map high-level languages such as C and OpenCL
+to FPGAs---targeting compiler-generated circuits, overlay processing
+engines, and combinations of the two.
+
+In this talk we describe the synergy between compiler and hardware when
+compiling highly-threaded and parallel code for a novel wide-issue
+overlay architecture with deeply-pipelined datapaths. Our goal in this
+work is to use the compiler to schedule instructions both within and
+across threads, to maximize the utilization of the hardware and to
+influence its design. We have developed a highly-parameterized engine
+comprising (i) deeply-pipelined floating point units of widely-varying
+latency (eg., addition/subtraction, multiplication, division and
+exponentiation), and (ii) operand network and (iii) storage that are
+both configurable in the number of ports and level of sharing across
+them. Using our LLVM-based compiler infrastructure and neuroscience
+simulation as an initial application area, we explore the scheduling
+algorithms and operand storage/networks that result in highest
+utilization and performance.

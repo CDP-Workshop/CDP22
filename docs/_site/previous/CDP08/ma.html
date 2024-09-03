@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>AOT Compilation In a Dynamic Environment for Startup Time Improvement</h1>
+
+The Java language has been popular for its many characteristics including
+object-oriented nature, security, and portability.  However, it's
+performance compared to static languages has been a concern.  Numerous
+efforts have been focused on trying to mitigate the performance
+differences.  One of those technologies is the JIT compiler, which has
+been found to achieve better performance than static compilers for a
+number of benchmarks.  However, the JIT compiler is a double-edged sword.
+Although JIT compilation can help improve throughput performance of
+applications, the dynamic nature of JIT compilation increases the overhead
+during runtime and reduces the efficiency when fast response time is
+needed or when applications are starting up.
+<p>
+
+The AOT compiler acts as a good substitute that can achieve better startup
+performance and at the same time, performs better than interpretation.
+Moreover, by combining the AOT technology with JIT technology and allowing
+AOT methods that are executed frequently to be recompiled by the JIT
+compiler, high throughput performance can be achieved along with fast
+startup time.  The AOT compiler in the IBM JRE for Java 6 supports this
+functionality and has been released on all 18 of IBM's J2SE platforms. The
+AOT compiler compiles methods into AOT code while the application is run
+for the first time and stores the code into a persistent cache.  The
+previously compiled AOT code can be loaded by subsequent JVMs for fast
+startup and response time.  We have made a number of improvements to the
+AOT technology, for example, better detection of the startup phase and
+allowing the methods to be recompiled earlier, for improving startup and
+throughput respectively.  Our experimental results have shown significant
+startup improvements by using AOT compilation: up to 18% for Websphere
+Application Server and 10% for Rational Application Developer.
+<p>
+
+This presentation will provide an overview of the AOT compiler in the IBM
+JRE for Java 6, explain the recent enhancements we have made to better
+exploit the AOT technology for faster startup time with good throughput,
+and summarize some cross-platform experimental results which demonstrate
+the effectiveness of the AOT compiler to help improve startup performance.
+
+
+    <hr>
+    <address><a href="mailto:steffan@krusty.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 26 10:06:53 EDT 2008 --> <!-- hhmts start --> <!-- hhmts
+end -->
+  </body>
+</html>

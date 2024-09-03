@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Buffered dynamic run-time profiling of arbitrary data for Virtual
+Machines which employ interpreter and Just-In-Time (JIT) compiler</h1>
+
+Run-time program profiling information can be very important for helping a
+compiler understand the dynamic program behavior and thereby allowing more
+targeted and aggressive optimization of the program. In a Virtual Machine
+(VM) environment with dynamic compilation, most of the profiling is
+performed on-line, while the application is running. One of the biggest
+challenges faced by VM designers when designing profiling frameworks is to
+efficiently collect and use the profiling data so that the application
+performance isn't affected significantly. For example, if the VM took a
+long time to collect the profiling information, or if it took a long time
+to process the collected data, the initial start-up performance of the
+application would be severely degraded. Another important aspect of the
+data collection process is the memory footprint overhead; the data
+collected by the profiler could take up a significant amount of memory. On
+the other hand, having more profiling information and more precise
+information is the key to better code and better run-time execution
+performance.
+<p>
+
+This presentation describes a buffered approach to collecting arbitrary
+profiling data about the program execution (using the VM's interpreter
+component) that is low overhead and memory efficient. Our approach
+maintains loose coupling between the interpreter and the JIT compiler,
+separating the responsibility of each component. The interpreter collects
+the data but the JIT compiler maintains and uses the buffered information
+periodically or on demand. We'll also discuss some of the algorithms we use
+to throttle the data collection to minimize the profiling impact on the
+application startup performance, while still collecting high quality
+profiling information about the application execution.
+
+
+
+    <hr>
+    <address><a href="mailto:steffan@krusty.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 26 10:05:14 EDT 2008 -->
+<!-- hhmts start -->
+Last modified: Tue Aug 26 10:05:53 EDT 2008
+<!-- hhmts end -->
+  </body>
+</html>

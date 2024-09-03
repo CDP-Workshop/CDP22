@@ -1,0 +1,25 @@
+Title: Optimizing thread-local variables in Java 
+
+Authors: Yi Zhang, Clark Verbrugge 
+Speaker: Yi Zhang
+
+Abstract:
+
+Many of the new concurrent programming languages, such as OpenMP, UPC, and 
+D, include features that make heavy use of thread-local data. When porting 
+such features as part of a language extension to Java, however, performance 
+can suffer due to the simple, map-based implementation of the ThreadLocal
+class.  We implement an optimized mechanism based on programmer annotations 
+that can efficiently ensure class and instance variables are only accessed 
+by their owner thread. Both class and instance variables inherit values from 
+the parent thread through deep copying, allowing all the reachable objects 
+of child threads to have local copies if syntactically specified. In 
+particular, class variable access involves direct access to thread-local 
+variables through a localized heap, which is faster and easier than 
+searching a map.  Our design improves performance significantly over the 
+traditional thread-local access method for class variables. We further 
+evaluate our approach by modifying non-trivial, existing benchmarks to make 
+better use of thread-local features, illustrating feasibility and allowing 
+us to measure the improvement in realistic contexts.  This work is intended 
+to bring us closer to designs for a complete race-free version of Java, as 
+well as show improved support for use of thread-local data in other languages.

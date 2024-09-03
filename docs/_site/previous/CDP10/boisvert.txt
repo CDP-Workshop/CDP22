@@ -1,0 +1,28 @@
+JavaScript is now the most widely supported dynamic programming
+language in existence; it is the language that powers the client-side
+of the web, and large companies such as Google and Microsoft have
+clearly stated their intent to build web applications intended to
+replace current desktop software based on this technology. Finding
+ways to get better performance out of JavaScript code and to provide
+more portable implementations of the language have become foremost
+concerns.
+
+The Tachyon project is a research initiative involving the creation of
+a meta-circular JavaScript virtual machine. This virtual machine is
+meta-circular because it is itself written in JavaScript and intended
+to compile and optimize itself just-in-time, along with client code,
+to platform-specific machine code. This project was officially started
+this year, and while still in early stages, has the potential to offer
+researchers a simpler and powerful alternative to explore novel
+dynamic language optimization techniques and study the behavior or
+dynamic languages.
+
+We intend to use this project to demonstrate the potential performance
+and design benefits of meta-circularity, to explore novel optimization
+techniques based on dynamic analysis, dynamic recompilation and
+on-stack replacement and to experiment with the idea of a virtual
+machine capable of serializing its own state. We plan to integrate
+Tachyon in a real web browser so as to test and demonstrate its
+capabilities in real-world situations, on non-synthetic JavaScript
+code. We further intend to make our system open source and available
+to other researchers.

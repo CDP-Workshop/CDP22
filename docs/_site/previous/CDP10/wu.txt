@@ -1,0 +1,26 @@
+Trace-driven compilation is a dramatically new approach to
+compilation, where the unit of compilation is formed dynamically, out
+of execution traces. The past decade has seen significant advances in
+trace compilation, especially in binary optimizers such as Dynamo and
+zPDT, and in dynamic compilers such as TraceMonkey (Javascript) and
+SPUR (Javascript,) and PyPy (Python).
+
+One promise of trace compilation is its potential to form compilation
+regions better than the traditional method-based selection + inlining
+approach. The process of forming traces for compilation is called
+trace selection . In this talk, we study the building blocks of trace
+selection algorithms. We found that seemingly reasonable trace
+termination conditions used in previous selection algorithms can
+terminate traces prematurely:
+
+   1. stop recording a trace when encountering a block that is the
+      head of an existing trace;
+   2. stop recording a trace when encountering a block that is already
+      in the trace buffer;
+   3. stop recording a trace when encountering a JNI call
+  
+We proposed techniques to relax these conditions and demonstrated
+significant performance improvement on the DaCapo benchmark using a
+Java trace JIT built on top of J9/Testarossa. Our results also showed
+promising signs where a trace JIT can compete with a method JIT at
+certain low optimization levels.

@@ -1,0 +1,17 @@
+Stencil algorithms are widely used in high performance applications
+such as for partial differential equations and image processing.  They
+usually keep updating one or multiple large arrays continuously. If
+the arrays are larger than the cache size, performance will be
+degraded significantly due to a large number of cache misses as a
+result of the LRU cache replacement policy.
+
+Our previous work showed that on-chip cache can be optimally managed
+by a LRU variant with cache bypassing. The new optimal policy has
+clear and simple hardware requirements. However, it needs simulating
+OPT policy on a complete memory trace, which is time-consuming. In
+this work, we show that regular cache bypassing patterns in simulation
+results from a training run with a small input can be applied to a
+real run with a large input. The proposed program-level approximately
+optimal cache management (PACMAN) is implemented as a feedback-based
+optimization and applied to several popular stencil workloads, in
+which the total numbers of misses are significantly reduced.

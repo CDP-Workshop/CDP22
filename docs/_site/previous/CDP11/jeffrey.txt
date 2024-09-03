@@ -1,0 +1,30 @@
+Title: Improving Bloom Filter Configuration for Lazy Transactional Memory
+
+Authors: Mark Jeffrey and J. Gregory Steffan (University of Toronto)
+Speaker: Mark Jeffrey
+
+Abstract:
+
+Transactional Memory (TM) systems must detect memory access conflicts across
+the read- and write-sets of concurrent transactions with minimal overhead.  For
+many TM systems, read- and write-sets are maintained and compared using Bloom
+filters that are efficient but can report false conflicts that do not exist.
+Recent theoretical work has demonstrated that systems with lazy conflict
+detection often use Bloom filters unconventionally by performing null
+intersection tests via unpartitioned Bloom filters---resulting in provably
+greater probability of false conflicts than alternative configurations, namely
+partitioned intersection and queues-of-queries.
+
+In this paper we use IBM's RingSTM and STAMP benchmarks to evaluate theory in
+practice by implementing and comparing these alternative Bloom filter
+configurations, to determine if their improved false conflict probabilities are
+worth their higher computation overheads.  We also present a new compromise
+approach called Batch-of-Bloom-filters (BoB) that strives for both the low
+false conflicts of a queue-of-queries approach and the lower computation
+overhead of intersection.  We find that the queue-of-queries approach typically
+reduces execution time, and is thus the most compelling alternative to Bloom
+filter intersection for lazy TM systems. The new BoB approach demonstrates
+impressive reductions in false conflicts but suffers from the high overheads of
+a software implementation even when optimized to exploit SIMD
+instructions---but is a compelling candidate for hardware implementation due to
+its natural parallelism.

@@ -1,0 +1,26 @@
+Kernel modules extend the functionality of operating systems. Modules
+are used to support new devices (e.g. network and graphics cards) and
+provide new features (e.g. file systems). The kernel and its modules
+execute in a complex and dynamic environment. Understanding how modules
+behave in and affect this environment is important. However, analyzing
+module behaviour is challenging. Static analysis is difficult because
+of the tight interaction between modules and the kernel or impossible
+because some modules are only provided in a binary format.
+
+This paper presents Granary, a framework for efficiently instrumenting
+Linux kernel modules. Granary uses dynamic binary translation to
+dynamically rewrite and comprehensively instrument kernel modules. Our
+approach is novel because Granary can instrument arbitrary, binary
+kernel modules without imposing any overhead on non-instrumented kernel
+code. Granary requires no special hardware support, requires minimal
+(under 100 lines) changes to the kernel, and re-introduces kernel type
+information into its analyses. Granary works on multi-core processors
+with pre-emptible kernels, and has modest overhead of 10% for network
+drivers and 2x for in-RAM file systems.
+
+Granary is a work-in-progress. We have used Granary to comprehensively
+instrument several network device drivers (e1000, e1000e, ixgbe, tg3)
+and file system modules (ext2, ext3, btrfs). We have applied Granary and
+enforced some control-flow integrity policies. These policies disallow
+modules from executing dangerous control-flow transfers. As future work,
+we plan to implement more optimizations and more applications.

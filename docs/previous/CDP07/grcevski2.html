@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Effective method for Java Lock Reservation for Java Virtual Machines that Have Cooperative Multithreading</h1>
+
+Java programs often execute code (especially in the class library) that is
+synchronized but the synchronization is actually not required for most
+common programs that are not heavily multithreaded. Synchronized code
+usually requires special platform instructions to ensure memory coherency
+which are usually expensive and can significantly slow down the running
+program. Lock reservation is a known compiler optimization that aims to
+reduce the synchronization overhead in programs with low contention. When
+lock reservation is used, a thread reserves the object being synchronized
+on for itself unless the object is also wanted by another thread. Once an
+object is reserved, the reserving thread can enter and exit the
+synchronized region of code without executing the expensive memory
+coherency instructions. However, lock reservation can cause increased
+contention or higher locking overhead if an object is truly contended and
+the reservation has to be cancelled.
+<p>
+
+In this talk, we describe an effective technique for lock reservation in a
+Virtual Machine (VM) environment that implements a cooperative threading
+model (i.e. threads voluntarily give up control at well defined yield
+points in the code). We also describe static and run-time heuristics for
+evaluating lock reservation effectiveness, as well as ways to further
+optimize locked code regions that do not contain any yield points.
+
+
+    <hr>
+    <address><a href="mailto:steffan@homer.eecg">Greg Steffan</a></address>
+<!-- Created: Tue Aug 28 11:26:22 EDT 2007 -->
+<!-- hhmts start -->
+Last modified: Fri Aug 31 10:24:16 EDT 2007
+<!-- hhmts end -->
+  </body>
+</html>

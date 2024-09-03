@@ -1,0 +1,22 @@
+Equipped with great portability and extensibility, Java has become
+one of the most popular languages over the last 20 years. Programmers
+now tend to write richer and larger Java applications. However, while
+programmers enjoy the robustness and extensibility of Java, large number
+of classes, methods and exceptions do come with a cost. They often
+result in many runtime components taking a nontrivial amount of time and
+processing power from the system.
+
+In many cases, we find that a large portion of this time is used on
+querying the large data structures allocated and used by the runtime
+system, this usually includes, but not limited to, exception table
+query, stack walking and garbage collection. In the case of exception
+handling, further study has shown that usually only a small amount of
+entries are being queried repeatedly in a given period. To address this
+problem, we exploit temporary locality by adding a small hash table that
+caches the result of recent queries. As a result, if the same query is
+issued in the near future, a close to O(1) search time can be achieved.
+
+Our presentation will describe how these caches are built within a
+production runtime system where classes can be unloaded and compiled
+method bodies can be reclaimed. Performance measurements with different
+cache sizes and hash functions will also be presented.

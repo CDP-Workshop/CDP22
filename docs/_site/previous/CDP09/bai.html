@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Cooperative Memory Management for Multi-core Systems</title>
+  </head>
+
+  <body>
+    <h1>Cooperative Memory Management for Multi-core Systems</h1>
+
+While a conventional program uses exactly as much memory as it needs,
+the memory use of a garbage-collected program can be adjusted by
+changing the size of the heap used by the garbage collector.  This
+difference provides challenges and opportunities for both the
+application and operating system.  Garbage-collected application can
+improve their performance by adapting their memory demands in response
+to the changing amount of available memory in today's multicore,
+multiprocessor machines.  Because applications' demands are not fixed,
+operating systems must also adopt how to best allocate memory between
+the concurrently executing processes.
+<p>
+
+We first present our adaptive system that allow garbage-collected
+applications, working both independently and in conjunction with other
+executing applications, to adjust and optimize its memory usage.  As
+we show using a series of diverse workloads, this system improves
+overall throughput by up to a factor of 4.5 without ever degrading
+performance.  We also descibe how operating systems can be modified to
+better account for this new application behavior.  By improving how
+the OS manages memory for concurrently executing applications, we can
+make application performance more predictable and decrease throughput
+time.  Taken together, this work shows why memory management must
+change in multiprogramming, multi-core environments and how these
+changes can be made.
+
+
+    <hr>
+    <address><a href="mailto:steffan@eecg.toronto.edu">Greg Steffan</a></address>
+<!-- Created: Wed Aug 26 18:11:26 EDT 2009 -->
+<!-- hhmts start -->
+Last modified: Wed Aug 26 18:21:23 EDT 2009
+<!-- hhmts end -->
+  </body>
+</html>

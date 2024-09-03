@@ -1,0 +1,29 @@
+Adaptive Just-in-Time (JiT) compilers employ a wide range of
+techniques to concentrate compilation efforts in the most promising
+spots of the application.  The goal is to balance tight compilation
+budgets with appropriate level of code quality.  Such techniques
+include profiling to identify hot spots in the application, using
+multiple compilation strategies, and performing aggressive
+optimizations.
+
+Some compiler researchers propose that JiT compilers should benefit
+from method-specific compilation strategies.  These strategies can be
+discovered through machine-learning techniques, where a compilation
+strategy is tailored to a method based on the method's
+characteristics.
+
+This presentation describes our investigation of the use of Support
+Vector Machines to create a learning-enabled, method-specific
+compilation infrastructure in Testarossa, a state-of-the-art
+commercial JiT compiler employed in the IBM J9 Java Virtual Machine.
+This new infrastructure allows Testarossa to quickly explore a large
+number of different compilation strategies, and to generate the data
+needed for training such models.  The infrastructure also enables
+Testarossa to integrate with a trained machine-learned model that
+predicts which learned compilation strategy has the appropriate
+balance of code quality and compilation effort on a per-method basis.
+
+We will present the results of an extensive experimental evaluation of
+the infrastructure and compare these results with the performance of
+the original Testarossa using adaptive operation, which was highly
+tuned by compiler experts over the course of many years.
